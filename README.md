@@ -5,3 +5,4 @@ twitter mobile app in swift
 - [x] Integrated LBTAComponents pod frameworks  
 - [x] More UIViews are added (e.g. usernameLabel, bioTextView, and followButton) 
 - [x] User Cell Design
+- [x] User MVC Implementation

@@ -13,8 +13,10 @@
 		B549661D1E1340D500BA85A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B549661B1E1340D500BA85A2 /* Main.storyboard */; };
 		B549661F1E1340D500BA85A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B549661E1E1340D500BA85A2 /* Assets.xcassets */; };
 		B54966221E1340D500BA85A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B54966201E1340D500BA85A2 /* LaunchScreen.storyboard */; };
-		B5CA310A1E94F6930005FB39 /* Cells.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CA31091E94F6930005FB39 /* Cells.swift */; };
+		B5CA310A1E94F6930005FB39 /* UserHeaderFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CA31091E94F6930005FB39 /* UserHeaderFooter.swift */; };
 		B5CA310C1E94F6C90005FB39 /* HomeDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CA310B1E94F6C90005FB39 /* HomeDatasource.swift */; };
+		B5CA310E1E95B08A0005FB39 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CA310D1E95B08A0005FB39 /* User.swift */; };
+		B5CA31101E95B4540005FB39 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CA310F1E95B4540005FB39 /* UserCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,8 +29,10 @@
 		B549661E1E1340D500BA85A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B54966211E1340D500BA85A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B54966231E1340D500BA85A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B5CA31091E94F6930005FB39 /* Cells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cells.swift; sourceTree = "<group>"; };
+		B5CA31091E94F6930005FB39 /* UserHeaderFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHeaderFooter.swift; sourceTree = "<group>"; };
 		B5CA310B1E94F6C90005FB39 /* HomeDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeDatasource.swift; sourceTree = "<group>"; };
+		B5CA310D1E95B08A0005FB39 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		B5CA310F1E95B4540005FB39 /* UserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		BBBB57B9517F92E3C160A062 /* Pods_twitter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_twitter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -114,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				B5CA310B1E94F6C90005FB39 /* HomeDatasource.swift */,
+				B5CA310D1E95B08A0005FB39 /* User.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -121,7 +126,8 @@
 		B5CA31081E94F6800005FB39 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B5CA31091E94F6930005FB39 /* Cells.swift */,
+				B5CA31091E94F6930005FB39 /* UserHeaderFooter.swift */,
+				B5CA310F1E95B4540005FB39 /* UserCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -253,8 +259,10 @@
 			files = (
 				B53D2B321E94EF910010AECA /* HomeDatasourceController.swift in Sources */,
 				B54966181E1340D500BA85A2 /* AppDelegate.swift in Sources */,
+				B5CA31101E95B4540005FB39 /* UserCell.swift in Sources */,
 				B5CA310C1E94F6C90005FB39 /* HomeDatasource.swift in Sources */,
-				B5CA310A1E94F6930005FB39 /* Cells.swift in Sources */,
+				B5CA310E1E95B08A0005FB39 /* User.swift in Sources */,
+				B5CA310A1E94F6930005FB39 /* UserHeaderFooter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
