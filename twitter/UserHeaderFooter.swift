@@ -23,6 +23,9 @@ class UserFooter: DatasourceCell {
     override func setupViews() {
         super.setupViews()
         
+        separatorLineView.isHidden = false
+        separatorLineView.backgroundColor = UIColor(r: 230, g: 230, b: 230)
+        
         addSubview(textLabel)
         textLabel.anchor(topAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, topConstant: 0, leftConstant: 12, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
         
@@ -42,12 +45,28 @@ class UserHeader: DatasourceCell {
     override func setupViews() {
         super.setupViews()
         
+        separatorLineView.isHidden = false
+        separatorLineView.backgroundColor = UIColor(r: 230, g: 230, b: 230)
+        
         addSubview(textLabel)
         textLabel.anchor(topAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, topConstant: 0, leftConstant: 12, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
     }
 }
 
 class UserCell: DatasourceCell {
+    
+    override var datasourceItem: Any? {
+        didSet {
+            
+            guard let user = datasourceItem as? User else {  return  }
+            nameLabel.text = user.name
+            usernameLabel.text = user.username
+            bioTextView.text = user.bioText
+            profileImageView.image = user.profileImage
+//            print(datasourceItem)
+        }
+    }
+
     
     let nameLabel: UILabel = {
         let lbl = UILabel()
@@ -95,12 +114,6 @@ class UserCell: DatasourceCell {
         btn.titleEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: -4)
         return btn
     }()
-    
-    override var datasourceItem: Any? {
-        didSet {
-//            nameLabel.text = datasourceItem as? String
-        }
-    }
     
     override func setupViews() {
         super.setupViews()

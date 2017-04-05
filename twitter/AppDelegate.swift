@@ -8,6 +8,9 @@
 
 import UIKit
 
+public let twitterBlue = UIColor(r: 61, g: 167, b: 244)
+public let seperatorGray = UIColor(r: 230, g: 230, b: 230)
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
