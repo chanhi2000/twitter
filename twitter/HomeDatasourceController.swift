@@ -15,7 +15,24 @@ class HomeDatasourceController: DatasourceController {
         self.datasource = HomeDatasource()
         
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    
     override func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        if let user = self.datasource?.item(indexPath) as? User {
+            
+            let approxBioTextviewWidth = view.frame.width - 12 - 50 - 12 - 2
+            let size = CGSize(width: approxBioTextviewWidth, height: 1000)
+            let attributes = [NSFontAttributeName: UIFont.systemFont(ofSize: 15)]
+            
+            let estimatedFrame = NSString(string: user.bioText).boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: attributes, context: nil)
+            
+            return CGSize(width: view.frame.width, height: estimatedFrame.height + 20 + 20 + 12 + 15)
+        }
+        
         return CGSize(width: view.frame.width, height: 150)
     }
     
