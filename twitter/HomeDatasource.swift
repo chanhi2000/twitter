@@ -11,9 +11,11 @@ import LBTAComponents
 class HomeDatasource: Datasource {
     
     let users: [User] = {
-        let user1 = User(name: "test1", username: "@test1", bioText: "MORE BIO TEXTS1", profileImage: #imageLiteral(resourceName: "zuckprofile"))
-        let user2 = User(name: "test2", username: "@test2", bioText: "MORE BIO TEXTS2", profileImage: #imageLiteral(resourceName: "wanderprofile"))
-        return [user1, user2]
+        let user1 = User(name: "test1", username: "@test1", bioText: "MORE BIO TEXTS1 MORE BIO TEXTS1 MORE BIO TEXTS1 MORE BIO TEXTS1", profileImage: #imageLiteral(resourceName: "zuckprofile"))
+        let user2 = User(name: "test2", username: "@test2", bioText: "MORE BIO TEXTS2 MORE BIO TEXTS2 MORE BIO TEXTS2 MORE BIO TEXTS2 MORE BIO TEXTS2 MORE BIO TEXTS2 MORE BIO TEXTS2 MORE BIO TEXTS2", profileImage: #imageLiteral(resourceName: "wanderprofile"))
+        
+        let user3 = User(name: "test3", username: "@test3", bioText: "MORE BIO TEXTS3 MORE BIO TEXTS3 MORE BIO TEXTS3 MORE BIO TEXTS3 MORE BIO TEXTS3 MORE BIO TEXTS3 MORE BIO TEXTS3 MORE BIO TEXTS3 MORE BIO TEXTS3 MORE BIO TEXTS3 MORE BIO TEXTS3 MORE BIO TEXTS3 MORE BIO TEXTS3 MORE BIO TEXTS3 MORE BIO TEXTS3 MORE BIO TEXTS3", profileImage: #imageLiteral(resourceName: "wanderprofile"))
+        return [user1, user2, user3]
     }()
     
 //    let words = ["user1", "user2", "user3"]
