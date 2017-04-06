@@ -50,7 +50,7 @@ class UserCell: DatasourceCell {
     let bioTextView: UITextView = {
         let txtv = UITextView()
         txtv.text = "Welcome and join us to facebook where everyone is connected."
-        txtv.font = UIFont.systemFont(ofSize: 14)
+        txtv.font = UIFont.systemFont(ofSize: 15)
         txtv.backgroundColor = .clear
         return txtv
     }()
@@ -72,7 +72,7 @@ class UserCell: DatasourceCell {
     
     override func setupViews() {
         super.setupViews()
-        //        backgroundColor = .yellow
+//        backgroundColor = .blue
         
         separatorLineView.isHidden = false
         separatorLineView.backgroundColor = seperatorGray
