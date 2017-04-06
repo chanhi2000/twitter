@@ -20,7 +20,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
-        window?.rootViewController = UINavigationController(rootViewController: HomeDatasourceController())
+        
+        let navigationController = UINavigationController(rootViewController: HomeDatasourceController())
+        navigationController.navigationBar.backgroundColor = .white
+        navigationController.navigationBar.isTranslucent = false
+        window?.rootViewController = navigationController
+        
+        
+        
         return true
     }
 
