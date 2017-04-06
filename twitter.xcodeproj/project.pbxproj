@@ -17,6 +17,7 @@
 		B5CA310C1E94F6C90005FB39 /* HomeDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CA310B1E94F6C90005FB39 /* HomeDatasource.swift */; };
 		B5CA310E1E95B08A0005FB39 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CA310D1E95B08A0005FB39 /* User.swift */; };
 		B5CA31101E95B4540005FB39 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CA310F1E95B4540005FB39 /* UserCell.swift */; };
+		B5CA31121E95C2740005FB39 /* HomeDatasourceController+Navbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CA31111E95C2740005FB39 /* HomeDatasourceController+Navbar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		B5CA310B1E94F6C90005FB39 /* HomeDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeDatasource.swift; sourceTree = "<group>"; };
 		B5CA310D1E95B08A0005FB39 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B5CA310F1E95B4540005FB39 /* UserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		B5CA31111E95C2740005FB39 /* HomeDatasourceController+Navbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HomeDatasourceController+Navbar.swift"; sourceTree = "<group>"; };
 		BBBB57B9517F92E3C160A062 /* Pods_twitter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_twitter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -110,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				B53D2B311E94EF910010AECA /* HomeDatasourceController.swift */,
+				B5CA31111E95C2740005FB39 /* HomeDatasourceController+Navbar.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			files = (
 				B53D2B321E94EF910010AECA /* HomeDatasourceController.swift in Sources */,
 				B54966181E1340D500BA85A2 /* AppDelegate.swift in Sources */,
+				B5CA31121E95C2740005FB39 /* HomeDatasourceController+Navbar.swift in Sources */,
 				B5CA31101E95B4540005FB39 /* UserCell.swift in Sources */,
 				B5CA310C1E94F6C90005FB39 /* HomeDatasource.swift in Sources */,
 				B5CA310E1E95B08A0005FB39 /* User.swift in Sources */,
