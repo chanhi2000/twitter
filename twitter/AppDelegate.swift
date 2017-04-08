@@ -9,7 +9,7 @@
 import UIKit
 
 public let twitterBlue = UIColor(r: 61, g: 167, b: 244)
-public let seperatorGray = UIColor(r: 230, g: 230, b: 230)
+public let separatorGray = UIColor(r: 230, g: 230, b: 230)
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -24,6 +24,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let navigationController = UINavigationController(rootViewController: HomeDatasourceController())
         navigationController.navigationBar.backgroundColor = .white
         navigationController.navigationBar.isTranslucent = false
+        
+        navigationController.navigationBar.shadowImage = UIImage()
+        navigationController.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        
+        
         window?.rootViewController = navigationController
         
         
