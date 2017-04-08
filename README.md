@@ -9,3 +9,5 @@ twitter mobile app in swift
 - [x] Dyanmic Cell Sizing 
 - [x] Custom Navigation Bar 
 - [x] Custom Tweet Cells 
+- [x] Tweet String Formatting with NSAttributedString
+  [ ]  
