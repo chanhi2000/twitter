@@ -15,8 +15,11 @@ class HomeDatasource: Datasource {
         let user2 = User(name: "test2", username: "@test2", bioText: "MORE BIO TEXTS2 MORE BIO TEXTS2 MORE BIO TEXTS2 MORE BIO TEXTS2 MORE BIO TEXTS2 MORE BIO TEXTS2 MORE BIO TEXTS2 MORE BIO TEXTS2", profileImage: #imageLiteral(resourceName: "wanderprofile"))
         
         let user3 = User(name: "test3", username: "@test3", bioText: "MORE BIO TEXTS3 MORE BIO TEXTS3 MORE BIO TEXTS3 MORE BIO TEXTS3 MORE BIO TEXTS3 MORE BIO TEXTS3 MORE BIO TEXTS3 MORE BIO TEXTS3 MORE BIO TEXTS3 MORE BIO TEXTS3 MORE BIO TEXTS3 MORE BIO TEXTS3 MORE BIO TEXTS3 MORE BIO TEXTS3 MORE BIO TEXTS3 MORE BIO TEXTS3", profileImage: #imageLiteral(resourceName: "wanderprofile"))
+        
         return [user1, user2, user3]
     }()
+    
+    let tweets = ["tweet1", "tweet2"]
     
 //    let words = ["user1", "user2", "user3"]
     
@@ -29,15 +32,26 @@ class HomeDatasource: Datasource {
     }
     
     override func cellClasses() -> [DatasourceCell.Type] {
-        return [UserCell.self]
+        return [UserCell.self, TweetCell.self]
     }
     
     override func item(_ indexPath: IndexPath) -> Any? {
         return users[indexPath.item]
     }
     
-    override func numberOfItems(_ section: Int) -> Int {
-        return users.count
+    override func numberOfSections() -> Int {
+        return 2
     }
+    
+    override func numberOfItems(_ section: Int) -> Int {
+        
+        if section == 1 {
+            return tweets.count
+        }
+        return users.count
+        
+    }
+    
+    
 }
 
