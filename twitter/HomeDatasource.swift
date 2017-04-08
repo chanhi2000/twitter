@@ -7,17 +7,31 @@
 //
 
 import LBTAComponents
+import TRON
+import SwiftyJSON
 
-class HomeDatasource: Datasource {
+class HomeDatasource: Datasource, JSONDecodable {
     
-    let users: [User] = {
-        let user1 = User(name: "test1", username: "@test1", bioText: "MORE BIO TEXTS1 MORE BIO TEXTS1 MORE BIO TEXTS1 MORE BIO TEXTS1", profileImage: #imageLiteral(resourceName: "zuckprofile"))
-        let user2 = User(name: "test2", username: "@test2", bioText: "MORE BIO TEXTS2 MORE BIO TEXTS2 MORE BIO TEXTS2 MORE BIO TEXTS2 MORE BIO TEXTS2 MORE BIO TEXTS2 MORE BIO TEXTS2 MORE BIO TEXTS2", profileImage: #imageLiteral(resourceName: "wanderprofile"))
+    let users: [User]
+    
+    required init(json: JSON) throws {
+        print("READY to parse json: \n", json)
         
-        let user3 = User(name: "test3", username: "@test3", bioText: "MORE BIO TEXTS3 MORE BIO TEXTS3 MORE BIO TEXTS3 MORE BIO TEXTS3 MORE BIO TEXTS3 MORE BIO TEXTS3 MORE BIO TEXTS3 MORE BIO TEXTS3 MORE BIO TEXTS3 MORE BIO TEXTS3 MORE BIO TEXTS3 MORE BIO TEXTS3 MORE BIO TEXTS3 MORE BIO TEXTS3 MORE BIO TEXTS3 MORE BIO TEXTS3", profileImage: #imageLiteral(resourceName: "wanderprofile"))
+        var users = [User]()
         
-        return [user1, user2, user3]
-    }()
+        let array = json["users"].array
+        for userJSON in array! {
+            let name = userJSON["name"].stringValue
+            let username = userJSON["username"].stringValue
+            let bio = userJSON["bio"].stringValue
+            
+            let user = User(name: name, username: username, bioText: bio, profileImage: UIImage())
+            users.append(user)
+        }
+        
+        self.users = users
+    }
+
     
     let tweets: [Tweet] = {
         let user1 = User(name: "test1", username: "@test1", bioText: "SOME BIO TEXT MORE BIO TEXT SOME BIO TEXT MORE BIO TEXT SOME BIO TEXT MORE BIO TEXT SOME BIO TEXT MORE BIO TEXT SOME BIO TEXT MORE BIO TEXT", profileImage: #imageLiteral(resourceName: "zuckprofile"))

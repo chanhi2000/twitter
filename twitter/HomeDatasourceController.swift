@@ -7,6 +7,8 @@
 //
 
 import LBTAComponents
+import TRON
+import SwiftyJSON
 
 class HomeDatasourceController: DatasourceController {
     
@@ -19,12 +21,61 @@ class HomeDatasourceController: DatasourceController {
         super.viewDidLoad()
         
         collectionView?.backgroundColor = UIColor(r: 232, g: 236, b: 241)
-        self.datasource = HomeDatasource()
-        
         setupNavigationBarItems()
         
+//        self.datasource = HomeDatasource()
+        
+        fetchHomefeed()
         
     }
+    
+    let tron = TRON(baseURL: "https://api.letsbuildthatapp.com/")
+    
+    class Home: JSONDecodable {
+        
+        let users: [User]
+        
+        required init(json: JSON) throws {
+//            print("READY to parse json: \n", json)
+            
+            var users = [User]()
+            
+            let array = json["users"].array
+            for userJSON in array! {
+                let name = userJSON["name"].stringValue
+                let username = userJSON["username"].stringValue
+                let bio = userJSON["bio"].stringValue
+                
+                let user = User(name: name, username: username, bioText: bio, profileImage: UIImage())
+                users.append(user)
+            }
+            
+            self.users = users
+        }
+    }
+    
+    class JSONError: JSONDecodable {
+        required init(json: JSON) throws {
+            print("JSON ERROR")
+        }
+    }
+    
+    fileprivate func fetchHomefeed() {
+        // JSON Fetch starts here: TRON way
+        let request: APIRequest<HomeDatasource,JSONError> = tron.request("twitter/home")
+        request.perform(withSuccess: { (homeDatasource) in
+            print("successfully fetched the json objects")
+            
+            print(homeDatasource.users.count)
+            self.datasource = homeDatasource
+            
+        }) { (error) in
+            print("failure to fetch json", error)
+        }
+        
+        request.method = .delete
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
