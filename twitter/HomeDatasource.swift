@@ -19,7 +19,13 @@ class HomeDatasource: Datasource {
         return [user1, user2, user3]
     }()
     
-    let tweets = ["tweet1", "tweet2"]
+    let tweets: [Tweet] = {
+        let user1 = User(name: "test1", username: "@test1", bioText: "SOME BIO TEXT MORE BIO TEXT SOME BIO TEXT MORE BIO TEXT SOME BIO TEXT MORE BIO TEXT SOME BIO TEXT MORE BIO TEXT SOME BIO TEXT MORE BIO TEXT", profileImage: #imageLiteral(resourceName: "zuckprofile"))
+        let tweet1 = Tweet(user: user1, message: "SOME BIO TEXT MORE BIO TEXT SOME BIO TEXT MORE BIO TEXT vvv SOME BIO TEXT MORE BIO TEXT SOME BIO TEXT MORE BIO TEXT vvv SOME BIO TEXT MORE BIO TEXT SOME BIO TEXT MORE BIO TEXT vvv SOME BIO TEXT MORE BIO TEXT SOME BIO TEXT MORE BIO TEXT vvv SOME BIO TEXT MORE BIO TEXT SOME BIO TEXT MORE BIO TEXT")
+        let tweet2 = Tweet(user: user1, message: "EXCITING NEWS: MORE BIO TEXT MORE BIO TEXT vvv EXCITING NEWS: MORE BIO TEXT MORE BIO TEXT vvv EXCITING NEWS: MORE BIO TEXT MORE BIO TEXT")
+        return [tweet1, tweet2]
+    }()
+    
     
 //    let words = ["user1", "user2", "user3"]
     
@@ -36,6 +42,9 @@ class HomeDatasource: Datasource {
     }
     
     override func item(_ indexPath: IndexPath) -> Any? {
+        if indexPath.section == 1 {
+            return tweets[indexPath.item]
+        }
         return users[indexPath.item]
     }
     
