@@ -72,10 +72,11 @@ class UserCell: DatasourceCell {
     
     override func setupViews() {
         super.setupViews()
-//        backgroundColor = .blue
+
+        backgroundColor = .white
         
         separatorLineView.isHidden = false
-        separatorLineView.backgroundColor = seperatorGray
+        separatorLineView.backgroundColor = separatorGray
         
         addSubview(profileImageView)
         addSubview(nameLabel)
