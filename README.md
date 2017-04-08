@@ -8,3 +8,4 @@ twitter mobile app in swift
 - [x] User MVC Implementation
 - [x] Dyanmic Cell Sizing 
 - [x] Custom Navigation Bar 
+- [x] Custom Tweet Cells 
