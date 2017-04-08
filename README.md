@@ -10,4 +10,5 @@ twitter mobile app in swift
 - [x] Custom Navigation Bar 
 - [x] Custom Tweet Cells 
 - [x] Tweet String Formatting with NSAttributedString
-  [ ]  
+- [x] UIStackView Landscape and Device Sizing Support
+- [ ]   
