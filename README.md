@@ -12,3 +12,4 @@ twitter mobile app in swift
 - [x] Tweet String Formatting with NSAttributedString
 - [x] UIStackView Landscape and Device Sizing Support
 - [x] JSON Parsing with TRON and Generics   
+- [x] Singleton and Completion Blocks 

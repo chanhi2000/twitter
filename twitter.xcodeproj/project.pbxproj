@@ -20,6 +20,7 @@
 		B5CA310E1E95B08A0005FB39 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CA310D1E95B08A0005FB39 /* User.swift */; };
 		B5CA31101E95B4540005FB39 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CA310F1E95B4540005FB39 /* UserCell.swift */; };
 		B5CA31121E95C2740005FB39 /* HomeDatasourceController+Navbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CA31111E95C2740005FB39 /* HomeDatasourceController+Navbar.swift */; };
+		B5FF64761E9999C7009D0C5B /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FF64751E9999C7009D0C5B /* Service.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		B5CA310D1E95B08A0005FB39 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B5CA310F1E95B4540005FB39 /* UserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		B5CA31111E95C2740005FB39 /* HomeDatasourceController+Navbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HomeDatasourceController+Navbar.swift"; sourceTree = "<group>"; };
+		B5FF64751E9999C7009D0C5B /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		BBBB57B9517F92E3C160A062 /* Pods_twitter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_twitter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -92,6 +94,7 @@
 		B54966161E1340D500BA85A2 /* twitter */ = {
 			isa = PBXGroup;
 			children = (
+				B5FF64741E9999B5009D0C5B /* Service */,
 				B5CA31081E94F6800005FB39 /* View */,
 				B5CA31071E94F6790005FB39 /* Model */,
 				B5CA31061E94F6720005FB39 /* Controller */,
@@ -139,6 +142,14 @@
 				B506C6FC1E98E3FE00EF34A1 /* TweetCell.swift */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		B5FF64741E9999B5009D0C5B /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				B5FF64751E9999C7009D0C5B /* Service.swift */,
+			);
+			name = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,6 +284,7 @@
 				B506C6FD1E98E3FE00EF34A1 /* TweetCell.swift in Sources */,
 				B5CA31101E95B4540005FB39 /* UserCell.swift in Sources */,
 				B5CA310C1E94F6C90005FB39 /* HomeDatasource.swift in Sources */,
+				B5FF64761E9999C7009D0C5B /* Service.swift in Sources */,
 				B5CA310E1E95B08A0005FB39 /* User.swift in Sources */,
 				B5CA310A1E94F6930005FB39 /* UserHeaderFooter.swift in Sources */,
 			);
